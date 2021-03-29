@@ -5,9 +5,6 @@ Sample Python code how to read data from Allen Bradley PLC, publish the values t
 
 The test set up consists of an Allen Bradley PLC with simulated data for 200 assets, with each asset having three tags so 600 tags in total. Connected to the PLC is a Linux VM with Python 3.8, InfluxDB Time Series Database, MQTT Broker, and Grafana for visualization. Goal is to stay below 100ms for reading and publishing the values to MQTT and storing into InfluxDB.
 
-All my sample code below can be found in my public GitHub repository:
-https://github.com/tschwankSF/allenbradley-mqtt-influx 
-
 Main driver for this project was that I couldn’t find a readily available and fast solution with a small enough footprint to run on a Linux Edge device, with the additional requirement to be easy to set up and configure.
 
 The core Python library used to communicate with the Allen Bradley PLC is pylogix, available at GitHub (https://github.com/dmroeder/pylogix). 
