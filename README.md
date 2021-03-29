@@ -1,5 +1,5 @@
 # allenbradley-mqtt-influx
-Sample python code how to read data from Allen Bradley PLC, publish the values to MQTT and store them into InfluxDB
+Sample Python code how to read data from Allen Bradley PLC, publish the values to MQTT and store them into InfluxDB
 
 ![abmqtt_08](https://user-images.githubusercontent.com/53979638/112776061-a1978080-900c-11eb-9d58-5e8f876dc9ca.png)
 
