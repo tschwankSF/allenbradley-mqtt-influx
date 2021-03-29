@@ -4,6 +4,8 @@
 
 The test set up consists of an Allen Bradley PLC with simulated data for 200 assets, with each asset having three tags so 600 tags in total. Connected to the PLC is a Linux VM with Python 3.8, InfluxDB Time Series Database, MQTT Broker, and Grafana for visualization. Goal is to stay below 100ms for reading and publishing the values to MQTT and storing into InfluxDB.
 
+A more detailed decription can be foud in this article: [Medium Article](https://thomas-schwank.medium.com/how-to-read-and-store-600-addresses-from-an-allen-bradley-plc-in-40-milliseconds-using-python-df8eb4da0399)
+
 Main driver for this project was that I couldn’t find a readily available and fast solution with a small enough footprint to run on a Linux Edge device, with the additional requirement to be easy to set up and configure.
 
 The core Python library used to communicate with the Allen Bradley PLC is pylogix, available at GitHub (https://github.com/dmroeder/pylogix). 
