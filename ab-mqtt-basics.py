@@ -6,7 +6,7 @@ from pylogix import PLC
 ab = PLC()
 
 # set IP address of PLC
-ab.IPAddress = '10.141.111.253'
+ab.IPAddress = 'aaa.bbb.ccc.ddd'
 
 # read one tag
 t = ab.Read('ASSET[1].PARTCOUNT')
