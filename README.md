@@ -12,7 +12,7 @@ Main driver for this project was that I couldn’t find a readily available and 
 
 The core Python library used to communicate with the Allen Bradley PLC is pylogix, available at GitHub (https://github.com/dmroeder/pylogix). 
 
-Using this library, a single tag can be read pretty simple and fast with a handful lines of code. In below example we are reading the tag ‘ASSET[1].PARTCOUNT’:
+Using this library, a single tag can be read pretty simple and fast with a handful lines of code. In below example [ab-mqtt-basic.py](ab-mqtt-basic.py) we are reading the tag ‘ASSET[1].PARTCOUNT’:
 
 ```python
 # import AB PLC Library "pylogix”
