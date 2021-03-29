@@ -32,7 +32,7 @@ ab.Close()
 
 ## This repository contains the following additional examples:
 
-* Importing a csv file with PLC addresses to read and reading them in end endless loop every one second, took about 400ms for 600 tags on my test system.
+* Importing a csv file with PLC addresses to read and reading them in an endless loop every one second, took about 400ms for 600 tags on my test system.
   * [ab-mqtt-loop.py](ab-mqtt-loop.py) 
 * Taking code above and spinning up threads, reduce time to read 600 tags from 400ms to 200ms
   * [ab-mqtt-multithread-part01.py](ab-mqtt-multithread-part01.py) 
