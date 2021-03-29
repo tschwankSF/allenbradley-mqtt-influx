@@ -36,15 +36,16 @@ ab.Close()
 
 This repository contains the following additional examples:
 
-* Importing a csv file with PLC addresses to read, and reading them in end endless loop every one second, took about 400ms for 600 tags on my test system.
-* Taking code above and spinnig up threads, reduce time to read 600 tags from 400ms to 200ms
-* Last change was to read addresses from PLC in batch, reducing the cycle time to abot 40ms for the 600 tags.
+* Importing a csv file with PLC addresses to read and reading them in end endless loop every one second, took about 400ms for 600 tags on my test system.
+* Taking code above and spinning up threads, reduce time to read 600 tags from 400ms to 200ms
+* Last change was to read addresses from PLC in batch, reducing the cycle time to about 40ms for the 600 tags.
 
-Tha last example also includes the code:
+The last example also includes the code:
 
 * to check if value for an address change since previous read
 * publish values to MQTT, two different topics:
   * One topic “ab_all” will get all values, doesn’t matter if they changed or not since the last read. For some streaming analytics job it is easier if they get all values in one message to run their algorithms.
   * For other consumers like a Time Series database it is better to get only values when they changed, and for this use cases below code publishes only the changed values into a topic called “ab_changed”
+* Stores the values into InfluxDB Time Series DB. I used Version 1.8 in this example.  
 
-Thanks for you intesres, feel free to contact me if you have questions or any other feedback.
+Thanks for your interest, feel free to contact me if you have questions or any other feedback.
