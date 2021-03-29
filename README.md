@@ -1,5 +1,6 @@
 # allenbradley-mqtt-influx
-Sample Python code how to read data from Allen Bradley PLC, publish the values to MQTT and store them into InfluxDB
+
+## Sample Python code how to read data from Allen Bradley PLC, publish the values to MQTT and store them into InfluxDB
 
 ![abmqtt_08](https://user-images.githubusercontent.com/53979638/112776061-a1978080-900c-11eb-9d58-5e8f876dc9ca.png)
 
@@ -31,13 +32,16 @@ print('Tag Name: ', t.TagName, '\nTag Value: ', t.Value)
 ab.Close()
 ```
 
-This repository contains the following additional examples:
+## This repository contains the following additional examples:
 
 * Importing a csv file with PLC addresses to read and reading them in end endless loop every one second, took about 400ms for 600 tags on my test system.
+  * [ab-mqtt-loop.py] (ab-mqtt-loop.py) 
 * Taking code above and spinning up threads, reduce time to read 600 tags from 400ms to 200ms
+  * [ab-mqtt-multithread-part01.py] (ab-mqtt-multithread-part01.py) 
 * Last change was to read addresses from PLC in batch, reducing the cycle time to about 40ms for the 600 tags.
+  * [ab-mqtt-multithread.py] (ab-mqtt-multithread.py)
 
-The last example also includes the code:
+## The last example also includes the code:
 
 * to check if value for an address change since previous read
 * publish values to MQTT, two different topics:
